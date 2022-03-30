@@ -18,11 +18,7 @@ mongoose.connect(config.mongoURI)
   	.catch((err) => console.log('err'))
 
 app.get('/', (req, res) => {
-<<<<<<< HEAD
   res.send('Hello World! mac to win test')
-=======
-  res.send('Hello World! mac test')
->>>>>>> 65b6f97997097ee8d7faa549fa344a85ee6da624
 })
 
 app.post('/register', (req, res)=>{
