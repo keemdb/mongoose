@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 const bodyParser = require('body-parser');
+const config = require('./config/key');
+
 const { User } = require('./models/User');
 
 //app/x-www-form-urlencoded 형식을 분석해서 가져온다.
@@ -11,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://keemdb:test1234@boilerplate.v3hxs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect(config.mongoURI)
 	.then(()=> console.log('MongoDB Connected...'))
   	.catch((err) => console.log('err'))
 
