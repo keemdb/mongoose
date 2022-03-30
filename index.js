@@ -16,7 +16,7 @@ mongoose.connect('mongodb+srv://keemdb:test1234@boilerplate.v3hxs.mongodb.net/my
   	.catch((err) => console.log('err'))
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World! nodemon test...')
 })
 
 app.post('/register', (req, res)=>{
